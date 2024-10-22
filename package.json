@@ -29,4 +29,8 @@
 		"postgres": "^3.4.4",
 		"vite-plugin-mkcert": "^1.17.5"
 	}
+	"engines": {
+  		"node": ">=20.x"  // Adjust to the version you're using locally
+	}
+
 }
