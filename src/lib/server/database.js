@@ -1,9 +1,14 @@
+import postgres from 'postgres';
 
-import postgres from 'postgres'
+// Access environment variables using process.env
+const PGCONNECT = process.env.PGCONNECT;
 
-// see env variables in .env
-import {PGCONNECT} from '$env/static/private';
+if (!PGCONNECT) {
+  throw new Error("PGCONNECT environment variable is not defined.");
+}
 
-const sql = postgres(PGCONNECT, {} )
+// Initialize the Postgres connection
+const sql = postgres(PGCONNECT, {});
 
+// Export the sql object for database queries
 export default sql;
