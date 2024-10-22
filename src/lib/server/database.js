@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import postgres from 'postgres';
 
 // Access environment variables using process.env
